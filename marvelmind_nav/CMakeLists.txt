@@ -34,7 +34,7 @@ add_library(marvelmind_nav_lib
 # Executables
 add_executable(marvelmind_nav src/marvelmind_navigation.cpp
                               src/marvelmind_hedge.c)
-ament_target_dependencies(marvelmind_nav rclcpp std_msgs marvelmind_interfaces)
+ament_target_dependencies(marvelmind_nav rclcpp rclcpp_lifecycle lifecycle_msgs std_msgs marvelmind_interfaces)
 target_link_libraries(marvelmind_nav
   ${rclcpp_lifecycle_LIBRARIES}
   ${std_msgs_LIBRARIES}
